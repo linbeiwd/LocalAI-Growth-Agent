@@ -122,18 +122,45 @@ export default function Home() {
   return (
     <main>
       <header className="hero">
-        <div className="brand">LOCALAI <span>GROWTH AGENT</span></div>
-        <div className="hero-copy">
-          <p className="eyebrow">给小店一支随时在线的内容团队</p>
-          <h1>把店铺信息，变成一周的获客内容。</h1>
-          <p className="hero-description">
-            一次输入，自动生成顾客画像、内容策略、抖音脚本、小红书笔记、朋友圈文案和七天行动计划。
-          </p>
-          <div className="trust-row">
-            <span>DeepSeek-V3.2 内容引擎</span>
-            <span>只依据真实信息</span>
-            <span>约 1 分钟生成</span>
+        <div className="topbar">
+          <div className="brand">LOCALAI <span>GROWTH AGENT</span></div>
+          <span className="topbar-note">LOCAL MERCHANT CONTENT OS · 2026</span>
+        </div>
+
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">本地商家的内容作战桌</p>
+            <h1>把店铺信息，<br />排成一周的<span>获客内容。</span></h1>
+            <p className="hero-description">
+              输入真实经营信息，得到可以直接执行的顾客画像、渠道文案与七天行动计划。
+            </p>
+            <div className="trust-row" aria-label="产品特点">
+              <span><b>01</b> 只依据真实信息</span>
+              <span><b>02</b> 六类内容成果</span>
+              <span><b>03</b> 约一分钟生成</span>
+            </div>
           </div>
+
+          <aside className="hero-board" aria-label="七天内容计划预览">
+            <div className="board-heading">
+              <div><span>WEEK / 01</span><strong>大学城餐饮店</strong></div>
+              <b>7D</b>
+            </div>
+            <p className="board-kicker">内容作战单</p>
+            <div className="board-days">
+              {DEMO_PLAN.weeklyPlan.map((item, index) => (
+                <div key={item.day} className={index === 0 ? "active" : ""}>
+                  <span>{item.day}</span>
+                  <strong>{item.theme}</strong>
+                  <small>{index === 0 ? "短视频" : index < 3 ? "图文" : "执行"}</small>
+                </div>
+              ))}
+            </div>
+            <div className="board-footer">
+              <span>从真实店铺信息开始</span>
+              <span>DEEPSEEK-V3.2</span>
+            </div>
+          </aside>
         </div>
       </header>
 
@@ -141,8 +168,8 @@ export default function Home() {
         <aside className="input-panel">
           <div className="panel-heading">
             <div>
-              <p className="step-label">STEP 01</p>
-              <h2>告诉我你的店铺</h2>
+              <p className="step-label">01 / STORE BRIEF</p>
+              <h2>输入真实经营信息</h2>
             </div>
             <button className="text-button" type="button" onClick={() => setForm(DEMO_INPUT)}>
               填入示例
@@ -193,8 +220,8 @@ export default function Home() {
         <section className="result-panel" aria-live="polite" aria-busy={loading}>
           <div className="panel-heading">
             <div>
-              <p className="step-label">STEP 02</p>
-              <h2>你的增长作战板</h2>
+              <p className="step-label">02 / CONTENT PLAN</p>
+              <h2>生成内容作战单</h2>
             </div>
             {plan && <span className="ready-badge">{source === "ai" ? "AI 已生成" : "示例结果"}</span>}
           </div>
@@ -217,7 +244,7 @@ export default function Home() {
         </section>
       </section>
 
-      <footer>为真实小商家而做 · LocalAI Growth Agent MVP</footer>
+      <footer><span>LOCALAI GROWTH AGENT</span><span>为真实小商家而做 · BUILD WEEK 2026</span></footer>
     </main>
   );
 }
@@ -225,9 +252,9 @@ export default function Home() {
 function EmptyState({ onLoadSample }: { onLoadSample: () => void }) {
   return (
     <div className="empty-state">
-      <div className="empty-mark">7D</div>
-      <h3>一套输入，六类成果</h3>
-      <p>左侧已放入大学城餐饮店示例。点击生成，即可看到完整的营销工作流。</p>
+      <div className="empty-mark"><span>READY</span><strong>7D</strong></div>
+      <h3>一份店铺简报，<br />六类可用成果</h3>
+      <p>左侧已放入真实场景示例。生成后，这里会成为你的七天内容作战单。</p>
       <div className="deliverables">
         {["顾客画像", "内容策略", "抖音脚本", "小红书笔记", "朋友圈文案", "七天计划"].map((item) => (
           <span key={item}>{item}</span>
