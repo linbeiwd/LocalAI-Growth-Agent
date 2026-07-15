@@ -16,7 +16,7 @@
 - [x] Local application passes tests, lint, build, and a real generation smoke test.
 - [x] Publish a judge-accessible demo and keep it available free of charge through the judging period.
 - [x] Store the production model key as a hosting secret, never in source control.
-- [x] Replace `LIVE_DEMO_URL` in the submission copy.
+- [x] Add the live demo URL to the submission copy.
 
 ## Video
 
