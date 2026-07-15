@@ -54,7 +54,7 @@ Test with consenting merchants, add feedback-based content revision, introduce r
 
 ## Submission links
 
-- Live demo: `LIVE_DEMO_URL`
+- Live demo: https://localai-growth-agent.qwewqsd.chatgpt.site
 - Code repository: https://github.com/linbeiwd/LocalAI-Growth-Agent
 - Public YouTube demo: `YOUTUBE_DEMO_URL`
 - Codex `/feedback` Session ID: `CODEX_FEEDBACK_SESSION_ID`

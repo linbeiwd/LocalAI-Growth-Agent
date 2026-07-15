@@ -5,7 +5,8 @@
 LocalAI Growth Agent is a responsive web app for small offline businesses that do not have a dedicated marketing team. A merchant enters seven facts about the store, audience, promotion, and competition. The app returns content that can be reviewed and used across Douyin, Xiaohongshu, and WeChat.
 
 **OpenAI Build Week track:** Work & Productivity  
-**Built during:** July 13–21, 2026
+**Built during:** July 13–21, 2026  
+**Live demo:** https://localai-growth-agent.qwewqsd.chatgpt.site
 
 ## Why it matters
 
@@ -97,4 +98,3 @@ Submission-ready copy, the under-three-minute video script, and the final checkl
 ## License
 
 [MIT](LICENSE)
-
