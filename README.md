@@ -95,6 +95,10 @@ The current validation covers input normalization, invalid input rejection, Open
 
 Submission-ready copy, the under-three-minute video script, and the final checklist are in [`submission/`](submission/). The official challenge page is [OpenAI Build Week on Devpost](https://openai.devpost.com/).
 
+## Contributing
+
+Bug reports, documentation fixes, and focused pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup and validation commands.
+
 ## License
 
 [MIT](LICENSE)
